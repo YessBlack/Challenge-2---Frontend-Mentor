@@ -1,0 +1,105 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+} 
+
+:root {
+
+    /*Primary*/
+    --colorPaleBlue: hsl(225, 100%, 94%);
+    --colorBrightBlue: hsl(245, 75%, 52%);
+
+    /*Neutral*/
+    --colorVeryPaleBlue: hsl(225, 100%, 98%);
+    --colorDesaturatedBlue: hsl(224, 23%, 55%);
+    --colorDarkBlue: hsl(223, 47%, 23%);
+
+    /*Color hover*/
+    --colorHover: #766cf1;
+    
+    /*Margenes*/
+    --margin: 20px;
+
+    /*Border radius*/
+    --borderRadius: 15px;
+}
+
+body {
+    background-image: url(../img/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--colorPaleBlue);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+p {
+    font-weight: 500;
+}
+a {
+    font-weight: 700;
+}
+.container-card {
+    max-width: 355px;
+    background-color: var(--colorVeryPaleBlue);
+    margin: var(--margin);
+    border-radius: var(--borderRadius);
+    box-shadow: 1px 0px 5px 0px var(--colorDesaturatedBlue);
+    
+}
+.header-card img {
+    width: 100%;
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+}
+.body-card, .footer-card {
+    padding: 1em 2.5em;
+}
+.title-service, .title-annual-plan {
+    color: var(--colorDarkBlue);
+    font-weight: 900;
+}
+.price-service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.description-service, .price-anual-plan {
+    color: var(--colorDesaturatedBlue);
+    line-height: 1.5em;
+    text-align: center;
+}
+.price-anual-plan {
+    line-height: .1em;
+}
+.btn-action-pay, .btn-secondary-cancel {
+    
+    padding: 1em;
+    
+    text-decoration: none;
+    border-radius: var(--borderRadius);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.btn-action-pay {
+    background-color: var(--colorBrightBlue);
+    color: white;
+}
+.btn-secondary-cancel {
+    color: var(--colorDesaturatedBlue);
+}
+
+.chage-annual-plan:hover {
+    color: var(--colorHover);
+}
+.btn-action-pay:hover {
+    background-color: var(--colorHover);
+}
+.btn-secondary-cancel:hover {
+    color: var(--colorDarkBlue);
+}
+@media (max-width: 375px)  {
+    body {
+        background-image: url(../img/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+    }
+}
